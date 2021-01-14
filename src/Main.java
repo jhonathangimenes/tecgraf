@@ -2,7 +2,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
-import repository.Matriculation;
+import file.Matriculation;
 
 public class Main {
 

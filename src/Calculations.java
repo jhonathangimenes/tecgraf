@@ -1,6 +1,3 @@
-
-
-
 public class Calculations {
 	public static String calculateHexdecimal(String cod) {
 		int multiplier = 5;

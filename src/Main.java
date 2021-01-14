@@ -2,8 +2,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
-import file.Matriculation;
-
 public class Main {
 
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package file;
+
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -26,7 +26,7 @@ public class Matriculation {
 		while (in.hasNextLine()) {
 		    String cod = in.nextLine();
 
-			String hexadecimal = calculate(cod);
+			String hexadecimal = Calculations.calculateHexdecimal(cod);
 			
 			System.out.println(cod + "-" + hexadecimal);
 			gravarArq.printf(cod + "-" + hexadecimal + "\n");
@@ -45,7 +45,7 @@ public class Matriculation {
 		while (in.hasNextLine()) {
 		    String cod = in.nextLine();
 		    
-			String hexadecimal = calculate(cod);
+			String hexadecimal = Calculations.calculateHexdecimal(cod);
 			
 			String possiblyHexadecimal = Character.toString(cod.charAt(5));
 			
@@ -59,18 +59,5 @@ public class Matriculation {
 		}
 		
 		file.close();
-	}
-	
-	public static String calculate(String cod) {
-		int multiplier = 5;
-		int total = 0;
-		int divider = 16;
-		
-		for(int i = 0; i < 4; i++) {
-			int subtractedMultiplier = multiplier - i;
-			total = Character.getNumericValue(cod.charAt(i)) * subtractedMultiplier + total;
-		}
-		
-		return Integer.toHexString((total % divider)).toUpperCase();
 	}
 }
